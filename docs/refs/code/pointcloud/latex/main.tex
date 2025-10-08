@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{biblatex}
+\usepackage{subfigure}
+\usepackage{subcaption}
+\addbibresource{references.bib}
+\usepackage{blindtext}
+\usepackage{subfiles}
+\usepackage{CJKutf8}
+\usepackage{xcolor, soul}
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{array}
+
+
+\title{Surface Pattern Recognition using Shape Subspace}
+\author{Ibrahim Naish\\Supervisor: Kazuhiro Fukui}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+This progress report presents significant advancements in surface anomaly detection for point cloud data, building upon our previously established Shape Subspace methodology. While our initial work focused on fixed patch analysis using synthetic data, we have now extended the approach to include a sliding window technique and validated it on real-world PLY files. The sliding window method introduces overlapping analysis regions with configurable stride, providing 3.5× higher spatial resolution compared to fixed patches. Experimental validation on real PLY data (61,914 points) demonstrates that the sliding window approach achieves superior visual contrast for anomaly detection, with improved signal-to-background ratio despite lower absolute peak magnitudes. The key finding is that method selection should be data-dependent: fixed patches perform better on clean synthetic data, while sliding windows excel with noisy real-world data. This work establishes practical guidelines for surface anomaly detection method selection and demonstrates successful transition from synthetic to real-world applications.
+
+
+\end{abstract}
+
+\section{Background and Previous Work}
+\subfile{sections/1-introduction}
+
+\section{Extension to Sliding Window Approach}
+\subfile{sections/2-methodology}
+
+\section{Real-World Validation and Comparative Analysis}
+\subfile{sections/3-discussion}
+
+\section{Results, Discussion and Future Work}
+\subfile{sections/4-conclusion}
+
+\printbibliography[]
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+
+\subsection{Summary of Contributions}
+
+We present three key advances: (1) a sliding window framework addressing boundary limitations with configurable overlap, (2) successful real-world validation on PLY files (61,914 points), and (3) comprehensive comparative analysis establishing data-dependent performance. The main finding: sliding window excels on noisy real data despite lower absolute magnitudes, providing 3.5× higher resolution and superior visual contrast through enhanced background suppression.
+
+\subsection{Practical Impact}
+
+\subsubsection{Method Selection Guidelines}
+
+We established evidence-based guidelines for method selection.
+\begin{itemize}
+    \item \textbf{Real-world applications:} Sliding window recommended for superior noise handling
+    \item \textbf{High-speed requirements:} Fixed patches for computational efficiency
+    \item \textbf{Precision localization:} Sliding window for detailed spatial analysis
+\end{itemize}
+
+\subsubsection{Theoretical Justification}
+
+Our work validates Shape Subspace methods for anomaly detection: subspaces capture complete geometric patterns (not just height variations), SVD naturally filters noise while preserving features, and Difference Subspace provides a mathematically rigorous comparison framework more interpretable than deep learning and more sophisticated than simple statistical methods.
+
+\subsection{Future Work}
+
+\subsubsection{Immediate Extensions}
+
+\textbf{Adaptive Parameter Selection:} Develop algorithms for automatic selection of the percentage of overlap and the size of the window based on the density of local points and noise characteristics.
+
+\textbf{Multi-Scale Analysis:} Implement hierarchical sliding window analysis with varying window sizes to capture anomalies at different scales simultaneously.
+
+\textbf{Performance Optimization:} Investigate parallel processing strategies and GPU acceleration for real-time analysis of large point clouds.
+
+\subsubsection{Practical Applications}
+
+\textbf{Infrastructure Monitoring:} Apply the method to the monitoring of structural health health of bridges, roads, and buildings for automated defect detection.
+
+\textbf{Quality Control:} Implement in manufacturing environments for inspection of surface quality of components produced.
+
+\textbf{Autonomous Systems:} Integrate with autonomous vehicle perception systems for real-time road condition assessment.
+
+\subsection{Conclusion}
+
+This progress report demonstrates substantial advancement from synthetic validation to real-world application. The sliding window extension addresses boundary limitations while maintaining mathematical rigor. Our key finding, that method effectiveness is data dependent, provides practical guidance: use fixed patches for clean data and sliding windows for noisy real-world data. This successful transition to real PLY files represents a crucial step toward practical deployment of shape subspace methods for surface anomaly detection.
+
+\end{document}

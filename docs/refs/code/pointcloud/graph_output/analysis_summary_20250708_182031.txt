@@ -1,0 +1,25 @@
+3D Mesh Surface Analysis Summary
+============================================================
+Analysis Date: 2025-07-08 18:22:21.075590
+Input File: C:\Users\ibrah\OneDrive\Documents\newpc3.ply
+Sample Size: 50000 points
+Sample Method: uniform
+Patch Resolution: 20x20
+
+Key Findings:
+  - Z range: -0.046920 to 0.032017
+  - Z standard deviation: 0.005862
+
+Method Correlations with Height-Based:
+  - Original DS: nan
+  - Modified DS: 0.518
+  - Local Shape DS: -0.210
+
+Output Files Generated:
+  - analysis_log_20250708_182031.txt
+  - analysis_results_20x20_20250708_182031.csv
+  - analysis_summary_20250708_182031.txt
+  - original_mesh_20250708_182031.png
+  - sampled_pointcloud_20250708_182031.png
+  - sampled_points_20250708_182031.csv
+  - z_distribution_analysis_20250708_182031.png

@@ -1,0 +1,37 @@
+**/extraction/split**.json
+
+# log / visualization
+**/*.jpg
+**/*.png
+results/
+visualizations/
+
+# python generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# venv
+.venv
+
+data/*
+!data/.gitkeep
+exp/
+model/
+
+# subspace model
+**/*.pkl
+# cache files
+_cache/
+# wandb offline runs
+_wandb/
+
+# qsub logs
+**/*.o*
+**/*.e*
+
+# temporary files
+**/_tmp*.py

@@ -1,0 +1,59 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+
+
+\begin{figure}[tb]
+  \centering
+  \subfigure[single]{
+    \includegraphics[width=0.23\textwidth]{single.png}
+  }
+  \subfigure[double]{
+    \includegraphics[width=0.23\textwidth]{double.png}
+  }
+  \subfigure[ridge]{
+    \includegraphics[width=0.23\textwidth]{ridge.png}
+  }
+  \centering
+  \subfigure[diagonal]{
+    \includegraphics[width=0.23\textwidth]{diagonal.png}
+  }
+  \subfigure[corners]{
+    \includegraphics[width=0.23\textwidth]{corners.png}
+  }
+  \subfigure[triangle]{
+    \includegraphics[width=0.23\textwidth]{triangle.png}
+  }
+  \centering
+  \subfigure[circle]{
+    \includegraphics[width=0.23\textwidth]{circle.png}
+  }
+  \subfigure[random]{
+    \includegraphics[width=0.23\textwidth]{random.png}
+  }
+%  \subfigure[t=9]{
+%    \includegraphics[width=0.23\textwidth]{frame91.jpg}
+%  }
+  \caption{Generated patterns}
+  \label{fig:1}
+\end{figure}
+
+\subsection{Previous Work Summary}
+
+Our initial research established a framework for surface pattern recognition on synthetic three-dimensional floor point clouds using Shape Subspace methods combined with Difference Subspace (DS) techniques. The methodology involved segmenting synthetic floor surfaces (50×50 units, 10,000 points) into uniform patches, generating shape subspaces via Singular Value Decomposition (SVD), and computing difference subspaces between neighboring patches to detect local surface variations.
+
+Key findings from our previous work demonstrated that:
+\begin{itemize}
+    \item Smaller patch sizes (3×3, 4×4) provided higher accuracy for fine-grained surface detection
+    \item Four-neighbor configurations delivered better sensitivity to local variations
+    \item Eight-neighbor approaches offered improved stability for complex patterns
+    \item The method successfully detected various synthetic patterns (bumps, ridges, corners)
+\end{itemize}
+
+\subsection{Motivation and Objectives}
+
+Although our initial approach proved effective on synthetic data, limitations became apparent: (1) boundary sensitivity at patch edges, (2) limited spatial resolution from non-overlapping patches, and (3) unvalidated performance on real-world noisy data. 
+
+This progress report addresses these through the development of a sliding window methodology with overlapping analysis regions, the validation of real PLY files (61,914 points), and the establishment of data-dependent method selection guidelines. The sliding window approach provides continuous coverage without rigid boundaries, bridging the gap between synthetic validation and real-world application.
+
+\end{document}

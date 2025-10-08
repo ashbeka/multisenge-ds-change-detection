@@ -1,0 +1,16 @@
+﻿# Example evaluation configuration (disaster triage)
+
+data_root: .
+s2_dir: s2
+patch_id: 32ULV_20201031_S2
+spatial_coords: "257_6425"
+date_indices: [0, -1]
+reflectance_scale: 10000.0
+subspace_k: 6
+rgb_bands: [2, 1, 0]
+
+# Benchmarks to compute alongside DS
+benchmarks: [ds_proj, ds_res, dndvi, dnbr, dndwi, dmndwi, dnirs, dswirs, cva, pca_diff]
+thresholds: [otsu, p95]
+metrics_out: outputs/32ULV_257_6425/metrics.csv
+out_dir: outputs/32ULV_257_6425

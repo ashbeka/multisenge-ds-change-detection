@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+.env/
+
+# Tooling cache
+.ipynb_checkpoints/
+
+# Local configuration
+*.code-workspace
+
+# Outputs and generated artifacts
+outputs/
+
+# Large datasets (store outside the repo)
+s2/
+*.tif
+*.tiff
+
+# OS-specific
+.DS_Store
+Thumbs.db

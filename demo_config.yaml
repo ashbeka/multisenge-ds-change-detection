@@ -1,0 +1,5 @@
+subspace_k: 6
+rgb_bands: [2, 1, 0]
+synthetic_shape: [128, 128, 10]
+synthetic_change_std: 0.2
+out_dir: outputs/synthetic_demo

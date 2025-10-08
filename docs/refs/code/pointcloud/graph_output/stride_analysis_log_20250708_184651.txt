@@ -1,0 +1,37 @@
+Stride-based Analysis started at: 2025-07-08 18:46:51.764463
+All outputs will be saved to: graph_output/
+============================================================
+Loading and sampling points from mesh...
+Loaded mesh from PLY file:
+  Number of vertices: 61914
+  Number of triangles: 122412
+
+Sampling 30000 points uniformly from mesh surface...
+Uniformly sampled 30000 points from mesh surface
+
+Final data shape: (30000, 3)
+X range: [-0.81, 1.08]
+Y range: [0.01, 1.83]
+Z range: [-0.05, 0.03]
+
+Stride Configuration:
+Patch size: (0.18853348050259783, 0.18163050549036958)
+Stride: (0.09426674025129891, 0.09081525274518479)
+Overlap: ~50%
+
+Extracting patches with stride...
+Point cloud bounds: X[-0.806, 1.079], Y[0.013, 1.829]
+Will create 18 x 18 = 324 patches
+Patch size: 0.189 x 0.182
+Stride: 0.094 x 0.091
+Patch statistics:
+  Points per patch - Min: 283, Max: 493, Avg: 301.1
+  Empty patches: 0
+
+Visualizing stride-based patches...
+
+Calculating stride-based patch differences...
+Generating subspaces for all patches...
+Calculating patch differences...
+
+Visualizing results with difference coloring...

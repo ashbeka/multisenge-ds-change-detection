@@ -1,0 +1,9 @@
+﻿{
+    "python.analysis.diagnosticSeverityOverrides":  {
+
+                                                    },
+    "python.analysis.typeCheckingMode":  "basic",
+    "python.analysis.extraPaths":  [
+                                       "src"
+                                   ]
+}

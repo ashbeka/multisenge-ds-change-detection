@@ -1,0 +1,39 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\usepackage{float}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\begin{document}
+
+\subsection{Sliding Window Methodology}
+
+The sliding window approach extends our fixed patch methodology by introducing overlapping analysis regions that move across the point cloud surface with configurable stride parameters. This addresses the boundary sensitivity limitations of fixed patches while maintaining the mathematical rigor of the shape subspace framework.
+
+\subsubsection{Mathematical Formulation}
+
+Given a point cloud with box dimensions that limit $(W, H)$, the sliding window creates a grid of overlapping analysis windows. For a desired window size $(w, h)$ and overlap percentage $\alpha \in [0, 1)$, the stride parameters are calculated as:
+
+\begin{align}
+s_x &= w \cdot (1 - \alpha) \\
+s_y &= h \cdot (1 - \alpha)
+\end{align}
+
+The resulting grid dimensions become:
+\begin{align}
+N_x &= \left\lfloor \frac{W - w}{s_x} \right\rfloor + 1 \\
+N_y &= \left\lfloor \frac{H - h}{s_y} \right\rfloor + 1
+\end{align}
+
+Each window $W_{i,j}$ at grid position $(i, j)$ encompasses points within the region:
+\begin{align}
+\mathcal{R}_{i,j} = \{(x, y, z) \mid x_{min} + i \cdot s_x \leq x < x_{min} + i \cdot s_x + w, \\
+& \qquad \qquad \quad y_{min} + j \cdot s_y \leq y < y_{min} + j \cdot s_y + h\}
+\end{align}
+
+
+
+\subsection{Real-World Data Processing}
+
+For PLY files, we implement preprocessing (centering, optional downsampling), adaptive window sizing based on point density, boundary handling for edge cases, and minimum point filtering to ensure meaningful subspace computation. This enables robust analysis while maintaining theoretical compatibility.
+
+\end{document}

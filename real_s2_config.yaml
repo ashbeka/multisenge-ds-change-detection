@@ -1,0 +1,20 @@
+# data_root: .
+# s2_dir: s2
+# patch_id: 32ULV_20201031_S2
+# date_indices: [0, -1]  # Use first and last available dates
+# spatial_coords: null  # e.g., "257_6425" - if null, uses first available
+# subspace_k: 6
+# rgb_bands: [2, 1, 0]
+# reflectance_scale: 10000.0
+# out_dir: outputs/real_s2_demo
+
+
+data_root: .
+s2_dir: s2
+patch_id: 32ULV_20200721_S2
+spatial_coords: "257_6425"
+date_indices: [0, -1]      # compares earliest and latest dates for that block
+subspace_k: 6
+rgb_bands: [2, 1, 0]
+reflectance_scale: 10000.0
+out_dir: outputs/32ULV_257_6425

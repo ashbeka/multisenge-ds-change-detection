@@ -1,0 +1,176 @@
+Analysis started at: 2025-07-08 18:17:10.461975
+All outputs will be saved to: graph_output/
+============================================================
+Visualizing original mesh...
+Saved visualization: graph_output\original_mesh_20250708_181710.png
+Loaded mesh from PLY file:
+  Number of vertices: 61914
+  Number of triangles: 122412
+  Has vertex normals: False
+  Has vertex colors: False
+
+Sampling 50000 points uniformly from mesh surface...
+Uniformly sampled 50000 points from mesh surface
+
+Final data shape: (50000, 3)
+X range: [-0.81, 1.08]
+Y range: [0.01, 1.83]
+Z range: [-0.05, 0.03]
+
+Visualizing sampled point cloud...
+Saved visualization: graph_output\sampled_pointcloud_20250708_181710.png
+
+Analyzing Z distribution...
+Z range: -0.046920 to 0.031737
+Z standard deviation: 0.005799
+Saved 50000 points to graph_output\sampled_points_20250708_181710.csv
+
+============================================================
+Analyzing with 10x10 patches
+============================================================
+
+Dividing sampled points into 10x10 patches...
+Expected points per patch: ~500
+Actual patch sizes - Min: 500, Max: 500, Avg: 500.0
+
+Calculating height-based differences...
+
+Height-based analysis statistics:
+Difference range: [0.000005, 0.042714]
+Mean difference: 0.004127
+Std difference: 0.007553
+Number of anomalous patches (top 20%): 20.0
+
+Top 5 patches with highest differences (potential bumps):
+1. Patch 73 (Row 7, Col 3) - Difference: 0.042714, Mean Z: -0.022299, Max Z: 0.024680
+2. Patch 56 (Row 5, Col 6) - Difference: 0.041246, Mean Z: -0.025189, Max Z: 0.031737
+3. Patch 33 (Row 3, Col 3) - Difference: 0.035050, Mean Z: -0.034444, Max Z: 0.028003
+4. Patch 74 (Row 7, Col 4) - Difference: 0.016999, Mean Z: -0.042488, Max Z: 0.014006
+5. Patch 72 (Row 7, Col 2) - Difference: 0.016184, Mean Z: -0.044596, Max Z: 0.014111
+
+
+Comparing with DS method...
+
+Running Modified DS method (height deviations)...
+
+Running Local Shape DS method (curvature features)...
+Saved analysis results to: graph_output\analysis_results_10x10_20250708_181710.csv
+
+DS analysis statistics:
+DS magnitude range: [3.000000, 3.000000]
+Mean DS magnitude: 3.000000
+Std DS magnitude: 0.000000
+Number of anomalous patches (top 20%): 0.0
+
+DS analysis statistics:
+DS magnitude range: [1.992688, 2.071911]
+Mean DS magnitude: 1.999075
+Std DS magnitude: 0.010996
+Number of anomalous patches (top 20%): 20.0
+
+DS analysis statistics:
+DS magnitude range: [2.423715, 2.442038]
+Mean DS magnitude: 2.437504
+Std DS magnitude: 0.003293
+Number of anomalous patches (top 20%): 20.0
+
+Comparison Statistics:
+Correlation with Height-Based Method:
+  - Original DS: nan
+  - Modified DS: 0.154
+  - Local Shape DS: -0.254
+
+Local Shape DS Statistics:
+Range: [2.423715, 2.442038]
+Mean: 2.437504
+Std: 0.003293
+
+Correlation between height-based and original DS: nan
+Correlation between height-based and modified DS: 0.154
+Correlation between height-based and local shape DS: -0.254
+Improvement (modified vs original): nan
+
+Comparison Statistics:
+Patches detected by both methods: 0.0
+Patches detected only by height: 20
+Patches detected only by DS: 0
+Agreement percentage: 80.0%
+
+Summary report saved as: graph_output\analysis_summary_20250708_181710.txt
+
+============================================================
+ANALYSIS COMPLETE
+============================================================
+Analysis completed at: 2025-07-08 18:20:13.139991
+
+All outputs have been saved to: graph_output/
+
+Generated files:
+  - all_methods_comparison_10x10.png
+  - all_methods_comparison_20x20.png
+  - all_methods_comparison_30x30.png
+  - analysis_log_20250701_004902.txt
+  - analysis_log_20250701_011731.txt
+  - analysis_log_20250701_011935.txt
+  - analysis_log_20250701_141418.txt
+  - analysis_log_20250708_174025.txt
+  - analysis_log_20250708_175539.txt
+  - analysis_log_20250708_175920.txt
+  - analysis_log_20250708_180615.txt
+  - analysis_log_20250708_181710.txt
+  - ds_method_10x10_analysis.png
+  - ds_method_20x20_analysis.png
+  - ds_method_30x30_analysis.png
+  - height_based_10x10_height_analysis.png
+  - height_based_10x10_patches.png
+  - height_based_20x20_height_analysis.png
+  - height_based_20x20_patches.png
+  - height_based_30x30_height_analysis.png
+  - height_based_30x30_patches.png
+  - height_vs_ds_comparison_10x10.png
+  - height_vs_ds_comparison_20x20.png
+  - height_vs_ds_comparison_30x30.png
+  - local_shape_ds_method_10x10_analysis.png
+  - local_shape_ds_method_20x20_analysis.png
+  - local_shape_ds_method_30x30_analysis.png
+  - modified_ds_method_10x10_analysis.png
+  - modified_ds_method_20x20_analysis.png
+  - modified_ds_method_30x30_analysis.png
+  - original_mesh_20250701_004902.png
+  - original_mesh_20250701_011731.png
+  - original_mesh_20250701_011935.png
+  - original_mesh_20250701_141418.png
+  - original_mesh_20250708_174025.png
+  - original_mesh_20250708_175539.png
+  - original_mesh_20250708_175920.png
+  - original_mesh_20250708_180615.png
+  - original_mesh_20250708_181710.png
+  - sampled_pointcloud_20250701_004902.png
+  - sampled_pointcloud_20250701_011731.png
+  - sampled_pointcloud_20250701_011935.png
+  - sampled_pointcloud_20250701_141418.png
+  - sampled_pointcloud_20250708_174025.png
+  - sampled_pointcloud_20250708_175539.png
+  - sampled_pointcloud_20250708_175920.png
+  - sampled_pointcloud_20250708_180615.png
+  - sampled_pointcloud_20250708_181710.png
+  - sampled_points_20250701_004902.csv
+  - sampled_points_20250701_011731.csv
+  - sampled_points_20250701_011935.csv
+  - sampled_points_20250701_141418.csv
+  - sampled_points_20250708_174025.csv
+  - sampled_points_20250708_175539.csv
+  - sampled_points_20250708_175920.csv
+  - sampled_points_20250708_180615.csv
+  - sampled_points_20250708_181710.csv
+  - z_distribution_analysis_20250701_004902.png
+  - z_distribution_analysis_20250701_011731.png
+  - z_distribution_analysis_20250701_011935.png
+  - z_distribution_analysis_20250701_141418.png
+  - z_distribution_analysis_20250708_174025.png
+  - z_distribution_analysis_20250708_175539.png
+  - z_distribution_analysis_20250708_175920.png
+  - z_distribution_analysis_20250708_180615.png
+  - z_distribution_analysis_20250708_181710.png
+
+Log file saved as: graph_output\analysis_log_20250708_181710.txt

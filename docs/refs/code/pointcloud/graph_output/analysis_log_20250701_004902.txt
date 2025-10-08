@@ -1,0 +1,122 @@
+Analysis started at: 2025-07-01 00:49:02.021868
+All outputs will be saved to: graph_output/
+============================================================
+Visualizing original mesh...
+Saved visualization: graph_output\original_mesh_20250701_004902.png
+Loaded mesh from PLY file:
+  Number of vertices: 61914
+  Number of triangles: 122412
+  Has vertex normals: False
+  Has vertex colors: False
+
+Sampling 50000 points uniformly from mesh surface...
+Uniformly sampled 50000 points from mesh surface
+
+Final data shape: (50000, 3)
+X range: [-0.81, 1.08]
+Y range: [0.01, 1.83]
+Z range: [-0.05, 0.03]
+
+Visualizing sampled point cloud...
+Saved visualization: graph_output\sampled_pointcloud_20250701_004902.png
+
+Analyzing Z distribution...
+Z range: -0.046920 to 0.032216
+Z standard deviation: 0.005889
+Saved 50000 points to graph_output\sampled_points_20250701_004902.csv
+
+============================================================
+Analyzing with 20x20 patches
+============================================================
+
+Dividing sampled points into 20x20 patches...
+Expected points per patch: ~125
+Actual patch sizes - Min: 125, Max: 125, Avg: 125.0
+
+Calculating height-based differences...
+
+Height-based analysis statistics:
+Difference range: [0.000005, 0.041519]
+Mean difference: 0.001881
+Std difference: 0.005017
+Number of anomalous patches (top 20%): 80.0
+
+Top 5 patches with highest differences (potential bumps):
+1. Patch 233 (Row 11, Col 13) - Difference: 0.041519, Mean Z: -0.009793, Max Z: 0.032216
+2. Patch 127 (Row 6, Col 7) - Difference: 0.033665, Mean Z: -0.027513, Max Z: 0.030084
+3. Patch 307 (Row 15, Col 7) - Difference: 0.031298, Mean Z: -0.016390, Max Z: 0.026534
+4. Patch 287 (Row 14, Col 7) - Difference: 0.024593, Mean Z: -0.024176, Max Z: 0.022420
+5. Patch 308 (Row 15, Col 8) - Difference: 0.022256, Mean Z: -0.029903, Max Z: 0.014006
+
+
+Comparing with DS method...
+
+Running Modified DS method (height deviations)...
+
+Running Local Shape DS method (curvature features)...
+Saved analysis results to: graph_output\analysis_results_20x20_20250701_004902.csv
+
+DS analysis statistics:
+DS magnitude range: [1.971117, 1.999885]
+Mean DS magnitude: 1.985811
+Std DS magnitude: 0.004359
+Number of anomalous patches (top 20%): 80.0
+
+DS analysis statistics:
+DS magnitude range: [1.971117, 2.091283]
+Mean DS magnitude: 1.987490
+Std DS magnitude: 0.009735
+Number of anomalous patches (top 20%): 80.0
+
+DS analysis statistics:
+DS magnitude range: [2.363407, 2.427967]
+Mean DS magnitude: 2.411206
+Std DS magnitude: 0.008507
+Number of anomalous patches (top 20%): 80.0
+
+Comparison Statistics:
+Correlation with Height-Based Method:
+  - Original DS: 0.118
+  - Modified DS: 0.445
+  - Local Shape DS: -0.197
+
+Local Shape DS Statistics:
+Range: [2.363407, 2.427967]
+Mean: 2.411206
+Std: 0.008507
+
+Correlation between height-based and original DS: 0.118
+Correlation between height-based and modified DS: 0.445
+Correlation between height-based and local shape DS: -0.197
+Improvement (modified vs original): 0.327
+
+Comparison Statistics:
+Patches detected by both methods: 22.0
+Patches detected only by height: 58
+Patches detected only by DS: 58
+Agreement percentage: 71.0%
+
+Summary report saved as: graph_output\analysis_summary_20250701_004902.txt
+
+============================================================
+ANALYSIS COMPLETE
+============================================================
+Analysis completed at: 2025-07-01 00:50:41.009791
+
+All outputs have been saved to: graph_output/
+
+Generated files:
+  - all_methods_comparison_20x20.png
+  - analysis_log_20250701_004902.txt
+  - ds_method_20x20_analysis.png
+  - height_based_20x20_height_analysis.png
+  - height_based_20x20_patches.png
+  - height_vs_ds_comparison_20x20.png
+  - local_shape_ds_method_20x20_analysis.png
+  - modified_ds_method_20x20_analysis.png
+  - original_mesh_20250701_004902.png
+  - sampled_pointcloud_20250701_004902.png
+  - sampled_points_20250701_004902.csv
+  - z_distribution_analysis_20250701_004902.png
+
+Log file saved as: graph_output\analysis_log_20250701_004902.txt

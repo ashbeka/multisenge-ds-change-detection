@@ -1,0 +1,28 @@
+﻿{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "DS Demo (Synthetic)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/run_ds_demo.py",
+            "args": ["--config", "demo_config.yaml"],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            }
+        },
+        {
+            "name": "DS Demo (Sentinel-2)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/run_ds_demo.py",
+            "args": ["--config", "real_s2_config.yaml"],
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            }
+        }
+    ]
+}
+

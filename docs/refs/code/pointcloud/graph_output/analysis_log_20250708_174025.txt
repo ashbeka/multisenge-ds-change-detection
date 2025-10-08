@@ -1,0 +1,36 @@
+Analysis started at: 2025-07-08 17:40:25.614264
+All outputs will be saved to: graph_output/
+============================================================
+Visualizing original mesh...
+Saved visualization: graph_output\original_mesh_20250708_174025.png
+Loaded mesh from PLY file:
+  Number of vertices: 61914
+  Number of triangles: 122412
+  Has vertex normals: False
+  Has vertex colors: False
+
+Sampling 50000 points uniformly from mesh surface...
+Uniformly sampled 50000 points from mesh surface
+
+Final data shape: (50000, 3)
+X range: [-0.81, 1.08]
+Y range: [0.01, 1.83]
+Z range: [-0.05, 0.03]
+
+Visualizing sampled point cloud...
+Saved visualization: graph_output\sampled_pointcloud_20250708_174025.png
+
+Analyzing Z distribution...
+Z range: -0.046920 to 0.031665
+Z standard deviation: 0.005826
+Saved 50000 points to graph_output\sampled_points_20250708_174025.csv
+
+============================================================
+Analyzing with 30x30 patches
+============================================================
+
+Dividing sampled points into 30x30 patches...
+Expected points per patch: ~55
+Actual patch sizes - Min: 55, Max: 71, Avg: 55.6
+
+Calculating height-based differences...
